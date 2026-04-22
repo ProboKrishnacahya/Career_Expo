@@ -200,6 +200,16 @@ section:not(.hero) {
     align-items: center;
     display: flex;
     justify-content: space-between;
+    position: relative;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-cetacean-blue);
+    padding: 0;
 }
 
 .nav {
@@ -465,6 +475,28 @@ hr {
         --text-xl: 2.2rem;
     }
 
+    .hamburger {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: var(--container-padding);
+        background-color: var(--color-white);
+        flex-direction: column;
+        padding: var(--space-md);
+        border-radius: var(--radius-md);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+        gap: var(--space-md);
+    }
+
+    .nav.nav--active {
+        display: flex;
+    }
+
     .hero__actions {
         align-items: center;
         flex-direction: column;
@@ -492,15 +524,34 @@ hr {
     .event__map {
         height: 22rem;
     }
+    
+    .about {
+        width: 90vw;
+    }
+
+    .powered {
+        width: 90vw;
+    }
 }
 
 @media screen and (max-width: 480px) {
-    .nav {
-        display: none;
-    }
-
     .powered__card {
         border-radius: 1.875rem;
         padding: 0.9375rem 1.25rem;
+    }
+
+    .about {
+        width: 95vw;
+    }
+
+    .powered {
+        width: 95vw;
+    }
+
+    #universitas-ciputra-logo {
+        width: 4rem;
+    }
+    #corporate-entrepreneurship-logo {
+        width: 6rem;
     }
 }
