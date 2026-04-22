@@ -108,8 +108,40 @@ section:not(.hero) {
     display: grid;
 }
 
+.grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
 .flex {
     display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.place-items-center {
+    place-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
 }
 
 .gap-xs {
@@ -124,6 +156,10 @@ section:not(.hero) {
     gap: var(--space-md);
 }
 
+.gap-lg {
+    gap: var(--space-lg);
+}
+
 .gap-xl {
     gap: var(--space-xl);
 }
@@ -136,12 +172,201 @@ section:not(.hero) {
     width: 100%;
 }
 
-.list-none {
-    list-style: none;
+.max-w-sm {
+    max-width: 15.625rem;
+}
+
+.w-75vw {
+    width: 75vw;
+}
+
+.h-full {
+    height: 100%;
+}
+
+.m-auto {
+    margin: auto;
+}
+
+.mx-auto {
+    margin-inline: auto;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.mt-2xl {
+    margin-top: var(--space-2xl);
+}
+
+.mt-sm {
+    margin-top: var(--space-sm);
+}
+
+.mb-sm {
+    margin-bottom: var(--space-sm);
+}
+
+.mb-md {
+    margin-bottom: var(--space-md);
+}
+
+.mb-md {
+    margin-bottom: var(--space-md);
+}
+
+.my-2xl {
+    margin-block: var(--space-2xl);
+}
+
+.p-md {
+    padding: var(--space-md);
+}
+
+.p-lg {
+    padding: var(--space-lg);
+}
+
+.p-xl {
+    padding: var(--space-xl);
+}
+
+.p-2xl {
+    padding: var(--space-2xl);
+}
+
+.px-md {
+    padding-inline: var(--space-md);
+}
+
+.py-md {
+    padding-block: var(--space-md);
 }
 
 .text-center {
     text-align: center;
+}
+
+.text-xs {
+    font-size: var(--text-xs);
+}
+
+.text-sm {
+    font-size: var(--text-sm);
+}
+
+.text-md {
+    font-size: var(--text-md);
+}
+
+.text-lg {
+    font-size: var(--text-lg);
+}
+
+.text-xl {
+    font-size: var(--text-xl);
+}
+
+.text-3xl {
+    font-size: var(--text-3xl);
+}
+
+.text-muted {
+    color: var(--color-text-muted);
+}
+
+.text-white {
+    color: var(--color-white);
+}
+
+.tracking-widest {
+    letter-spacing: 0.5rem;
+}
+
+.tracking-wider {
+    letter-spacing: 0.075rem;
+}
+
+.font-heading {
+    font-family: var(--font-heading);
+}
+
+.font-bold {
+    font-family: var(--font-body-bold);
+}
+
+.bg-white {
+    background-color: var(--color-white);
+}
+
+.bg-sky-blue {
+    background-color: var(--color-sky-blue);
+}
+
+.bg-orange {
+    background-color: var(--color-orange);
+}
+
+.bg-dark-cerulean {
+    background-color: var(--color-dark-cerulean);
+}
+
+.rounded-md {
+    border-radius: var(--radius-md);
+}
+
+.rounded-lg {
+    border-radius: var(--radius-lg);
+}
+
+.rounded-xl {
+    border-radius: var(--radius-xl);
+}
+
+.rounded-full {
+    border-radius: 9999px;
+}
+
+.rounded-r-xl {
+    border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+}
+
+.rounded-l-xl {
+    border-radius: var(--radius-xl) 0 0 var(--radius-xl);
+}
+
+.avatar-circle {
+    border: 0.1rem solid var(--color-dark-cerulean);
+    border-radius: 100%;
+    height: 6.25rem;
+    width: 6.25rem;
+    display: block;
+    margin: 0 auto;
+}
+
+.border-subtle {
+    border: 0.0625rem solid #eaeaea;
+}
+
+.map-height {
+    height: var(--map-height);
+}
+
+.list-none {
+    list-style: none;
+}
+
+.block {
+    display: block;
+}
+
+.relative {
+    position: relative;
+}
+
+.hidden {
+    display: none;
 }
 
 /* Global blocks */
@@ -243,164 +468,6 @@ section:not(.hero) {
     color: var(--color-cetacean-blue);
 }
 
-/* Hero */
-.hero {
-    display: grid;
-    gap: var(--space-lg);
-    text-align: center;
-    padding: var(--space-2xl);
-}
-
-.hero__title {
-    font-size: var(--text-3xl);
-    letter-spacing: 0.5rem;
-}
-
-.hero__actions {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-sm);
-}
-
-/* About */
-.about {
-    width: 75vw;
-}
-
-.about__card {
-    background-color: var(--color-sky-blue);
-    border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
-    padding: var(--space-xl);
-}
-
-.about__content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-md);
-}
-
-.about__content-detail {
-    display: grid;
-    gap: var(--space-sm);
-}
-
-.about__image {
-    border-radius: var(--radius-md);
-}
-
-/* Powered */
-.powered {
-    width: 75vw;
-    margin-left: auto;
-}
-
-.powered__card {
-    place-items: center;
-    background-color: var(--color-orange);
-    border-radius: var(--radius-xl) 0 0 var(--radius-xl);
-    padding: var(--space-xl);
-}
-
-.powered__content {
-    display: flex;
-    gap: var(--space-sm);
-}
-
-/* Event */
-.event__card {
-    background-color: var(--color-dark-cerulean);
-    border-radius: var(--radius-md);
-    color: var(--color-white);
-    padding: var(--space-md);
-}
-
-.event__map-wrap {
-    margin-bottom: var(--space-sm);
-}
-
-.event__map {
-    height: var(--map-height);
-}
-
-.event__description {
-    display: grid;
-    gap: var(--space-xs);
-}
-
-.event__description-item {
-    display: flex;
-    place-content: center;
-    gap: var(--space-xs);
-    text-align: center;
-}
-
-/* Testimonials */
-.testimonials__grid {
-    display: grid;
-    gap: var(--space-sm);
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.testimonial-card {
-    background-color: var(--color-white);
-    border: 0.0625rem solid #eaeaea;
-    border-radius: var(--radius-lg);
-    padding: 1.5rem;
-}
-
-.testimonial-card__avatar {
-    border: 0.1rem solid var(--color-dark-cerulean);
-    border-radius: 100%;
-    height: 6.25rem;
-    display: block;
-    margin: 0 auto;
-    width: 6.25rem;
-}
-
-.testimonial-card__name {
-    font-size: 1.1rem;
-    margin-bottom: 0.9375rem;
-    text-align: center;
-}
-
-.testimonial-card__quote {
-    color: var(--color-text-muted);
-    font-size: var(--text-xs);
-}
-
-/* Sponsors */
-.sponsors__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    place-items: center;
-    gap: var(--space-sm);
-}
-
-/* Footer */
-footer {
-    background-color: var(--color-orange);
-    color: var(--color-white);
-}
-
-.footer__menu {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.footer__powered {
-    display: flex;
-    gap: var(--space-sm);
-
-    #universitas-ciputra-logo {
-        width: 5rem;
-    }
-
-    #corporate-entrepreneurship-logo {
-        width: 8rem;
-    }
-}
-
-
 hr {
     border: 0.03125rem solid var(--color-white);
     border-radius: var(--space-sm);
@@ -418,6 +485,18 @@ hr {
     position: fixed;
     right: 1rem;
     z-index: 20;
+}
+
+#universitas-ciputra-logo {
+    object-fit: contain;
+    aspect-ratio: 1/1;
+    width: 5rem;
+}
+
+#corporate-entrepreneurship-logo {
+    object-fit: contain;
+    aspect-ratio: 16/9;
+    width: 10rem;
 }
 
 /* Font faces */
@@ -438,41 +517,43 @@ hr {
 
 /* Responsive */
 @media screen and (max-width: 992px) {
-    .about__card {
+    .flex-col-lg {
         flex-direction: column;
-        padding: 1.875rem;
+    }
+
+    .text-center-lg {
         text-align: center;
     }
 
-    .about__media {
+    .w-full-lg {
         width: 100%;
     }
 
-    .sponsors__grid {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .footer__menu {
+    .lg-grid-cols-2 {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-}
 
-#universitas-ciputra-logo {
-    object-fit: contain;
-    aspect-ratio: 1/1;
-    width: 10rem;
-}
-
-#corporate-entrepreneurship-logo {
-    object-fit: contain;
-    aspect-ratio: 16/9;
-    width: 20rem;
+    .lg-grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
 }
 
 @media screen and (max-width: 768px) {
     :root {
         --container-padding-inline: 1rem;
         --text-xl: 2.2rem;
+    }
+
+    .md-grid-cols-1 {
+        grid-template-columns: 1fr;
+    }
+
+    .md-grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .sm-map-height {
+        height: 22rem;
     }
 
     .hamburger {
@@ -497,24 +578,8 @@ hr {
         display: flex;
     }
 
-    .hero__actions {
-        align-items: center;
+    .flex-col-md {
         flex-direction: column;
-    }
-
-    .btn {
-        justify-content: center;
-        max-width: 15.625rem;
-        width: 100%;
-    }
-
-    .testimonials__grid,
-    .footer__menu {
-        grid-template-columns: 1fr;
-    }
-
-    .sponsors__grid {
-        grid-template-columns: repeat(2, 1fr);
     }
 
     .decor {
@@ -524,26 +589,19 @@ hr {
     .event__map {
         height: 22rem;
     }
-    
-    .about {
-        width: 90vw;
-    }
 
+    .about,
     .powered {
         width: 90vw;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .powered__card {
-        border-radius: 1.875rem;
+    .p-xl-sm {
         padding: 0.9375rem 1.25rem;
     }
 
-    .about {
-        width: 95vw;
-    }
-
+    .about,
     .powered {
         width: 95vw;
     }
@@ -551,6 +609,7 @@ hr {
     #universitas-ciputra-logo {
         width: 4rem;
     }
+
     #corporate-entrepreneurship-logo {
         width: 6rem;
     }
